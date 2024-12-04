@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellibot</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        .content {
+            width: 65%;
+            background-color: #eb5561;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content h1 {
+            margin: 0;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .chatbot {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chatbot .header,
+        .chatbot .footer {
+            background-color: #eb5561;
+            height: 30px;
+        }
+
+        .chatbot .main {
+            flex: 1;
+            padding: 15px;
+            background-color: #f8f8f8;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #chatbot-iframe {
+        display: block !important;
+        width: 450px !important;
+        
+        position: absolute !important;
+        min-height: 600px !important;
+        top: 45px;
+        bottom: auto !important;
+        right: 15px !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #chatbot-toggle {
+        position: relative !important;
+        bottom: auto !important;
+        right: auto !important;
+        z-index: 0 !important;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div>
+            <div><img src="#" alt="Logo Placeholder" style="max-width: 100px;"></div>
+            <h1>Intellibot, your business helper</h1>
+            <h2>Hello, I am Intellibot and I am here to help you improve your business!</h2>
+            <p>Ask me questions, and I will provide tailored results to your specific needs. Together, we can optimize
+                your strategies and solve your challenges.</p>
+            <p>Feel free to explore the best ways to grow your business. Whether it’s insights, tips, or direct
+                assistance, I’m here for you!</p>
+        </div>
+        <div>
+            <p>Contact Information Placeholder</p>
+        </div>
+    </div>
+    <div class="chatbot">
+        <div class="header"></div>
+        <div class="main">
+            <iframe title="bot" id="chatbot-iframe" src="https://usefulchatbot.com/chatbot/79xmj67xfyl9aiynbr6abhpb">
+            </iframe>
+
+            <script
+                src="https://cb74bb8453d70173733c9ae166d9db4a.cdn.bubble.io/f1718755475175x239237956795653950/chatbot.js">
+                </script>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+
+</html>
