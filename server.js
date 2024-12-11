@@ -1,10 +1,18 @@
 const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
+const cors = require('cors');  // Import cors package
 dotenv.config();
 
 const app = express();
-const port = 3000;
+
+// Enable CORS for all routes
+app.use(cors({
+    origin: '*',  // Allow all origins (for local development, this is fine)
+    methods: ['GET', 'POST'], // Allow GET and POST methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+    optionsSuccessStatus: 200  // For legacy browser support
+}));
 
 // Middleware to parse JSON bodies
 app.use(express.json());
@@ -29,13 +37,14 @@ app.post('/chat', async (req, res) => {
             }
         });
 
-        res.json(response.data);
+        res.json(response.data);  // Send OpenAI response back to frontend
     } catch (error) {
         console.error(error);
         res.status(500).send({ error: 'Failed to communicate with OpenAI' });
     }
 });
 
+// Start the server
 app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running.`);
 });
