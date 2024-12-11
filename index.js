@@ -5,6 +5,7 @@ const cors = require('cors');  // Import cors package
 dotenv.config();
 
 const app = express();
+const port = 443;
 
 // Enable CORS for all routes
 app.use(cors({
