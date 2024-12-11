@@ -9,8 +9,8 @@ const app = express();
 // Enable CORS for all routes
 app.use(cors({
     origin: '*',  // Allow all origins (for local development, this is fine)
-    methods: ['GET', 'POST'], // Allow GET and POST methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+    methods: ['*'], // Allow GET and POST methods
+    //allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
     optionsSuccessStatus: 200  // For legacy browser support
 }));
 
